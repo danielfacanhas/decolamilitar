@@ -1,0 +1,188 @@
+/* Fundo animado (igual ao responder_questao.php) */
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #f1f3f1 50%, #FFFFFF 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: 0.5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+@keyframes slide {
+    0% { transform: translateX(-10%); }
+    100% { transform: translateX(10%); }
+}
+
+
+/* Título da página */
+.titulo {
+    text-align: center;
+    font-family: "Black Han Sans", sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #2e3d2f;
+}
+
+.titulo h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Suavização global */
+* {
+    transition: 0.2s ease;
+    scroll-behavior: smooth;
+}
+
+/* Cartões (usado em várias páginas) */
+.card-custom, .questao-card {
+    border: 3px solid #495846;
+    border-radius: 15px;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Botões suaves */
+.btn-custom {
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-weight: 600;
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Área de conteúdo centralizada */
+.page-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Título da página */
+.titulo {
+    text-align: center;
+    font-family: "Black Han Sans", sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #2e3d2f;
+}
+
+.titulo h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+@keyframes slide {
+    0% { transform: translateX(-10%); }
+    100% { transform: translateX(10%); }
+}
+
+/* Títulos com suavização */
+.titulo h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #2e3d2f;
+    margin-top: 40px;
+    font-weight: bold;
+    animation: fadeDown 0.6s ease;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* PRELOADER GLOBAL */
+#site-preloader {
+  position: fixed !important;
+  inset: 0 !important; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(255,255,255,0.98) !important; /* fundo quase branco; altere para dark se preferir */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 99999 !important; /* acima de tudo */
+  transition: opacity 320ms ease, visibility 320ms ease !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* conteúdo interno */
+.preloader-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px 18px !important;
+}
+
+/* logo opcional */
+.preloader-logo {
+  width: 88px !important;
+  height: 88px !important;
+  object-fit: contain !important;
+  border-radius: 12px !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08) !important;
+}
+
+/* spinner (círculo) */
+.preloader-spinner {
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  border: 6px solid #e9eef3 !important;
+  border-top-color: #495846 !important; /* cor do indicador (verde escuro) */
+  animation: preloader-spin 0.8s linear infinite !important;
+  box-shadow: 0 6px 14px rgba(73,88,70,0.08) !important;
+}
+
+/* texto pequeno */
+.preloader-label {
+  font-size: 0.92rem !important;
+  color: #6b6f72 !important;
+  font-weight: 600 !important;
+  letter-spacing: .2px !important;
+}
+
+/* animação do spinner */
+@keyframes preloader-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* escondendo com fade */
+#site-preloader.hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* mobile tweak: reduzir logo/spinner */
+@media (max-width: 480px) {
+  .preloader-logo { width: 64px !important; height: 64px !important; }
+  .preloader-spinner { width: 48px !important; height: 48px !important; border-width: 5px !important; }
+}

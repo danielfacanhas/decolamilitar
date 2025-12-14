@@ -1,0 +1,120 @@
+/* Fundo animado (mantido igual às outras páginas) */
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(120deg, #f5f5f5 50%, #d9d9d9 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 { animation-direction: alternate-reverse; animation-duration: 4s; }
+.bg3 { animation-duration: 5s; }
+
+@keyframes slide {
+  0% { transform: translateX(-25%); }
+  100% { transform: translateX(25%); }
+}
+
+/* Título */
+.titulo h1 {
+    font-family: "Black Han Sans", sans-serif;
+    color: #2e3d2f;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.12);
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Card do simulado */
+.sim-card {
+    background: #ffffff;
+    border: 3px solid #495846;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.sim-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+
+/* Imagem do card */
+.sim-img {
+    width: 90%;
+    margin: 10px auto 20px auto;
+    border-radius: 10px;
+}
+
+/* Título do card */
+.sim-title {
+    font-family: "Black Han Sans", sans-serif;
+    color: #315a2c;
+    margin-bottom: 10px;
+}
+
+/* Texto do card */
+.sim-txt {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* Botão */
+.btn-simulado {
+    background-color: #315a2c;
+    border-color: #315a2c;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    color: white;
+    transition: 0.25s;
+    text-decoration: none;
+}
+
+.btn-simulado:hover {
+    background-color: #4b7c45;
+    border-color: #4b7c45;
+    transform: translateY(-3px);
+}
+
+/* Título da página */
+.titulo {
+    text-align: center;
+    font-family: "Black Han Sans", sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #2e3d2f;
+}
+
+.titulo h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+@keyframes slide {
+    0% { transform: translateX(-10%); }
+    100% { transform: translateX(10%); }
+}
+
+/* Títulos com suavização */
+.titulo h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #2e3d2f;
+    margin-top: 40px;
+    font-weight: bold;
+    animation: fadeDown 0.6s ease;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

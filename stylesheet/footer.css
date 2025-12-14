@@ -1,0 +1,33 @@
+footer p {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+small {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Permite que o footer fique no final da página mesmo quando há pouco conteúdo */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Força que o conteúdo principal ocupe o espaço vertical, empurrando o footer */
+main, .content, .container, .form-wrapper {
+    flex: 1 0 auto;
+}
+
+/* Footer como bloco normal no fim da página */
+footer {
+    flex-shrink: 0;
+    background: #f8f9fa; /* cor opcional, pode trocar */
+    padding: 15px 0;
+}

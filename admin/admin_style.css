@@ -1,0 +1,438 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-wrapper {
+      flex: 1;
+      padding: 40px 0;
+    }
+
+    /* Card do formulário */
+    .form-card {
+      background: white;
+      border: 3px;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-bottom: 30px;
+      animation: slideUp 0.5s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .form-card h3 {
+      font-family: "Black Han Sans", sans-serif;
+      color: #2e3d2f;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #495846;
+    }
+
+    /* Cards de estatísticas */
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .stat-card {
+      background: white;
+      border: 3px;
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      transition: all 0.3s ease;
+      animation: slideUp 0.6s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(73,88,70,0.2);
+    }
+
+    .stat-icon {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #495846;
+      font-family: "Black Han Sans", sans-serif;
+    }
+
+    .stat-label {
+      color: #666;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+
+    /* Inputs */
+    .form-control, .form-select {
+      border: 2px solid #d0d0d0;
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: #495846;
+      box-shadow: 0 0 0 0.25rem rgba(73,88,70,0.15);
+      background-color: #f8fdf8;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    /* Upload de foto */
+    .photo-upload-container {
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 15px;
+      margin-bottom: 25px;
+      border: 2px dashed #495846;
+      transition: all 0.3s ease;
+    }
+
+    .photo-upload-container:hover {
+      border-color: #6a9762;
+      background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+    }
+
+    .file-input-label {
+      display: inline-block;
+      padding: 10px 25px;
+      background: #495846;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .file-input-label:hover {
+      background: #6a9762;
+      transform: translateY(-2px);
+    }
+
+    .file-input-hidden {
+      display: none;
+    }
+
+    /* Select de role */
+    .role-option {
+      padding: 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .role-option:hover {
+      border-color: #495846;
+      background: #f8fdf8;
+      transform: translateX(5px);
+    }
+
+    .role-option input[type="radio"]:checked ~ .role-content {
+      font-weight: bold;
+    }
+
+    .role-option input[type="radio"]:checked {
+      accent-color: #495846;
+    }
+
+    .role-icon {
+      font-size: 2rem;
+    }
+
+    .role-content {
+      flex: 1;
+    }
+
+    .role-title {
+      font-weight: 600;
+      color: #2e3d2f;
+      font-size: 1.1rem;
+      margin-bottom: 3px;
+    }
+
+    .role-description {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    /* Botões */
+    .btn-cadastrar {
+      background: linear-gradient(135deg, #495846, #6a9762);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .btn-cadastrar:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(73, 88, 70, 0.3);
+      color: white;
+    }
+
+    .btn-voltar {
+      background: linear-gradient(135deg, #6c757d, #868e96);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-weight: 600;
+      border: none;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-voltar:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+      color: white;
+    }
+
+    /* Senha strength indicator */
+    .password-strength {
+      height: 5px;
+      background: #e0e0e0;
+      border-radius: 5px;
+      margin-top: 8px;
+      overflow: hidden;
+    }
+
+    .password-strength-bar {
+      height: 100%;
+      width: 0%;
+      transition: all 0.3s ease;
+    }
+
+    .strength-weak { width: 33%; background: #dc3545; }
+    .strength-medium { width: 66%; background: #ffc107; }
+    .strength-strong { width: 100%; background: #28a745; }
+
+    /* Info box */
+    .info-box {
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      border-left: 4px solid #2196f3;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+
+    .info-box strong {
+      color: #1976d2;
+    }
+
+    
+    .questao-item {
+      border: 2px solid #d0d0d0;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .questao-item:hover {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .questao-item input[type="checkbox"]:checked ~ .questao-content {
+      background: #f0fff4;
+    }
+
+    .questao-content {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .questao-preview {
+      max-height: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      white-space: normal;
+    }
+
+    .form-simulado {
+      background: white;
+      border: 3px;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .badge-disciplina {
+      background: linear-gradient(135deg, #495846, #6a9762);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 0.85rem;
+    }
+    
+    .badge-tipo {
+      background: linear-gradient(135deg, #ffc107, #ffca2c);
+      color: #333;
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      margin-left: 8px;
+    }
+
+    .questoes-container {
+      max-height: 500px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 15px;
+      background: #fafafa;
+    }
+
+    .contador-selecionadas {
+      background: linear-gradient(135deg, #495846, #6a9762);
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      border-left: 4px solid #2196f3;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+
+    mjx-container {
+      max-width: 100% !important;
+      white-space: normal !important;
+      overflow-x: hidden !important;
+      overflow-wrap: break-word !important;
+      word-break: break-word !important;
+      text-align: justify !important;
+    }
+
+    mjx-container[display="block"] {
+      width: 100% !important;
+      display: block !important;
+      text-align: justify !important;
+    }
+
+    mjx-container mjx-math {
+      width: 100% !important;
+      display: block !important;
+      white-space: normal !important;
+      text-align: justify !important;
+    }
+
+    mjx-container::after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+    }
+
+    .questao-item, .questao-card {
+      width: 100%;
+      min-height: 220px;
+      max-height: 220px;
+      padding: 15px;
+      background: white;
+      border: 2px solid #d0d0d0;
+      border-radius: 10px;
+      overflow: hidden;
+      white-space: normal !important;
+      word-break: break-word !important;
+      overflow-wrap: break-word !important;
+    }
+
+    .enunciado {
+      white-space: normal !important;
+      word-break: break-word !important;
+      overflow-wrap: break-word !important;
+      text-align: justify;
+      max-height: 160px;
+      overflow: hidden;
+    }
+
+    .btn-modern {
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-weight: 600;
+      border: none;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-voltar {
+      background: linear-gradient(135deg, #6c757d, #868e96);
+      color: white;
+    }
+
+    .btn-voltar:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+      color: white;
+    }
+
+    .info-table {
+      background: white;
+      border: 3px;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-bottom: 20px;
+    }
+    
+    .info-table h5 {
+      color: #2e3d2f;
+      margin-bottom: 20px;
+      font-weight: bold;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e9ecef;
+    }

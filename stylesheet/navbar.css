@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Configuração dos textos do navbar */
+.navbar-nav .nav-link {
+    display: flex;
+    border: 2px solid #475846;
+    border-radius: 50px;
+    margin: 5px;
+    padding: 8px 15px;
+    background-color: #495846;
+    color: white !important;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+    border-color: #6a9762;
+    background-color: #6a9762;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Foto do usuário */
+.foto {
+    margin: 10px;
+    clip-path: circle(45%);
+}
+
+.rounded-circle {
+    object-fit: cover;
+}
+
+/* ==================== DROPDOWN FIX ==================== */
+
+/* Container do dropdown */
+.dropdown {
+    position: relative !important;
+}
+
+/* Menu dropdown - FORÇADO para aparecer */
+.dropdown-menu {
+    position: absolute !important;
+    z-index: 9999 !important;
+    min-width: 200px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2) !important;
+    background: white !important;
+    padding: 8px 0 !important;
+    margin-top: 10px !important;
+    inset: auto !important;
+    transform: none !important;
+}
+
+/* Alinhamento à direita */
+.dropdown-menu-end {
+    right: 0 !important;
+    left: auto !important;
+}
+
+/* Exibição quando ativo */
+.dropdown-menu.show {
+    display: block !important;
+    animation: dropdownSlide 0.2s ease !important;
+}
+
+@keyframes dropdownSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Remove seta padrão do Bootstrap */
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+/* Estilo dos itens do menu */
+.dropdown-item {
+    padding: 10px 20px !important;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 14px !important;
+    transition: all 0.2s ease !important;
+    color: #333 !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f3f1 !important;
+    padding-left: 25px !important;
+    color: #495846 !important;
+}
+
+.dropdown-item:focus {
+    background-color: #f1f3f1 !important;
+    color: #495846 !important;
+}
+
+.dropdown-item.text-danger {
+    color: #dc3545 !important;
+}
+
+.dropdown-item.text-danger:hover {
+    background-color: #ffe5e5 !important;
+    color: #dc3545 !important;
+}
+
+.dropdown-divider {
+    margin: 8px 0 !important;
+    border-top: 1px solid #e0e0e0 !important;
+}
+
+/* Foto de perfil como botão do dropdown */
+.dropdown-toggle {
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    border: 3px solid #d7fad0 !important;
+    border-radius: 100%;
+}
+
+.dropdown-toggle:hover {
+    transform: scale(1.05) !important;
+    border-color: #88d67a !important;
+    box-shadow: 0 4px 8px rgba(106, 151, 98, 0.3) !important;
+}
+
+/* Texto de boas-vindas */
+.navbar-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.navbar-text strong {
+    color: #495846;
+    font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 991px) {
+    .dropdown-menu {
+        position: static !important;
+        width: 100% !important;
+        margin-top: 10px !important;
+        transform: none !important;
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 5px 0;
+    }
+}

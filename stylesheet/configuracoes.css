@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Fundo animado */
+.bg, .bg2, .bg3 {
+    position: fixed;
+    top: 0;
+    left: -50%;
+    right: -50%;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.bg {
+    background-image: linear-gradient(-60deg, rgb(209, 209, 209) 50%, rgb(173, 173, 173) 50%);
+    animation: slide 24s ease-in-out infinite alternate;
+}
+
+.bg2 {
+    background-image: linear-gradient(-60deg, rgb(224, 224, 224) 50%, rgb(233, 233, 233) 50%);
+    animation: slide 26s ease-in-out infinite alternate-reverse;
+}
+
+.bg3 {
+    background-image: linear-gradient(-60deg, rgb(238, 238, 238) 50%, rgb(212, 212, 212) 50%);
+    animation: slide 32s ease-in-out infinite alternate;
+}
+
+@keyframes slide {
+    0% { transform: translateX(-25%); }
+    100% { transform: translateX(25%); }
+}
+
+/* Título da página */
+.titulo {
+    text-align: center;
+    font-family: "Black Han Sans", sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #2e3d2f;
+}
+
+.titulo h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Container principal */
+.container {
+    flex: 1;
+    margin-top: 20px;
+}
+
+/* Formulário */
+form {
+    border: 3px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding: 30px;
+}
+
+form h4 {
+    color: #2e3d2f;
+    font-weight: 600;
+    border-bottom: 2px solid #495846;
+    padding-bottom: 10px;
+}
+
+/* Inputs */
+.form-control {
+    border: 2px solid #d0d0d0;
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #495846;
+    box-shadow: 0 0 0 0.2rem rgba(73, 88, 70, 0.25);
+}
+
+/* Labels */
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: #495846 !important;
+    border-color: #495846 !important;
+    padding: 12px 20px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+    background-color: #6a9762 !important;
+    border-color: #6a9762 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+/* Zona de perigo */
+.border-danger {
+    border-width: 2px !important;
+}
+
+.btn-danger {
+    font-weight: 600 !important;
+    padding: 10px 20px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+img.rounded-circle:hover {
+    transform: scale(1.01);
+}
+
+/* Alertas */
+.alert {
+    border-radius: 10px;
+    font-weight: 500;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+    padding-top: 0;
+}
+
+/* Separador */
+hr {
+    border-top: 2px solid #e0e0e0;
+    margin: 30px 0;
+}
+
+/* Textos pequenos */
+small.text-muted {
+    font-size: 0.85rem;
+    color: #6c757d !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .titulo h1 {
+        font-size: 2rem;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    img.rounded-circle {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+/* Ajusta a imagem em telas pequenas */
+@media (max-width: 576px) {
+    .info-header img {
+        width: 110px !important;
+        height: 110px !important;
+    }
+}
+
+    /* Senha strength indicator */
+    .password-strength {
+      height: 5px;
+      background: #e0e0e0;
+      border-radius: 5px;
+      margin-top: 8px;
+      overflow: hidden;
+    }
+
+    .password-strength-bar {
+      height: 100%;
+      width: 0%;
+      transition: all 0.3s ease;
+    }
+
+    .strength-weak { width: 33%; background: #dc3545; }
+    .strength-medium { width: 66%; background: #ffc107; }
+    .strength-strong { width: 100%; background: #28a745; }

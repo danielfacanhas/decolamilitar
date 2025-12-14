@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* import das fontes de texto */
+
+
+body {
+    background-color: #495846;
+}
+/* cor de fundo */
+
+/* espaçamento dos itens no navbar */
+.container-fluid {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+/* configuração dos textos do navbar */
+.navbar-nav .nav-link {
+    display: flex;
+    border: #475846 solid;
+    border-radius: 50px;
+    margin: 5px;
+    padding: 8px 15px;
+    background-color: #495846;
+    color: white !important;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px; 
+}
+
+/* aspecto de borda dos cartoes */
+.card {
+    border: 5px solid #ffffff;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* alteracao da fonte e cor dos titulos dos cartoes */
+.card-title {
+    font-family: "Black Han Sans", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 5px 25px 4px #0000;
+    color: #000000;
+}
+
+.card-img-top {
+    transition: transform 0.2s ease; /* transicao*/
+    position: relative; /* faz com que a imagem fique pra tras, e a imagem do hover se sobressaia */
+    z-index: 1; 
+    /* coordenada da profundidade */
+}
+
+.card-img-top:hover {
+    opacity: 1;
+    /* opacidade da imagem do hover */
+    transform: scale(1.1); /* taxa do aumento*/
+    z-index: 5;             /* alteracao da coordenada da profundidade da imagem hover*/
+    box-shadow: 0, 0, 20px rgba(0,0,0,0.4); /* sombra */
+}

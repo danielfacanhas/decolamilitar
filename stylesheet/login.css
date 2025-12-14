@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+/* Fundo animado igual ao resto do projeto */
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(120deg, rgb(187, 209, 179) 50%, rgb(219, 219, 219) 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+@keyframes slide {
+    0% { transform: translateX(-25%); }
+    100% { transform: translateX(25%); }
+}
+
+/* CARD do Login */
+.login-card {
+    background: #ffffffd6;
+    padding: 40px;
+    border-radius: 25px;
+    width: 380px;
+    backdrop-filter: blur(4px);
+}
+
+/* Título */
+.titulo {
+    font-family: "Black Han Sans", sans-serif;
+    font-size: 1.6rem;
+    color: #2e3d2f;
+    animation: fadeDown 0.6s ease;
+}
+
+.esqueci-senha {
+    text-color: red;
+}
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Inputs */
+.input-estilizado {
+    border-radius: 15px;
+    border: 2px;
+    transition: 0.2s;
+}
+
+.input-estilizado:focus {
+    border-color: #30592a;
+    box-shadow: 0 0 5px rgba(48, 89, 42, 0.4);
+}
+
+/* Botão */
+.btn-login {
+    background-color: #315a2c;
+    border-color: #315a2c;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.btn-login:hover {
+    background-color: #4b7c45;
+    border-color: #4b7c45;
+    transform: translateY(-2px);
+}
+
+/* Link cadastro */
+.link-cadastro {
+    font-family: "Montserrat", sans-serif;
+    color: #1a3d22;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link-cadastro:hover {
+    color: #315a2c;
+    text-decoration: underline;
+}
+
+/* Fundo da lateral direita do cadastro */
+.gradient-custom-2 {
+    background: linear-gradient(135deg, #4b7c45, #698f63, #8faa83);
+    color: white;
+}
+
+
+    /* Senha strength indicator */
+    .password-strength {
+      height: 5px;
+      background: #e0e0e0;
+      border-radius: 5px;
+      margin-top: 8px;
+      overflow: hidden;
+    }
+
+    .password-strength-bar {
+      height: 100%;
+      width: 0%;
+      transition: all 0.3s ease;
+    }
+
+    .strength-weak { width: 33%; background: #dc3545; }
+    .strength-medium { width: 66%; background: #ffc107; }
+    .strength-strong { width: 100%; background: #28a745; }
+
+/* Contêiner da senha */
+.password-container {
+    position: relative;
+}
+
+/* Ícone do olho */
+.toggle-visibility {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #507b48;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.toggle-visibility:hover {
+    color: #315a2c;
+}
+
+/* Remove padding extra da direita para evitar que o texto encoste no ícone */
+.password-container input {
+    padding-right: 40px !important;
+}
+
+  .btn-success {
+    display: center !important;
+    border: 2px!important;
+    border-radius: 50px !important;
+    margin: 5px !important;
+    padding: 8px 15px !important;
+    background-color: rgb(55, 85, 47) !important;
+    color: white !important;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 15px !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+  }
+
+    .btn-success:hover {
+    background-color: rgb(153, 204, 140) !important;
+    }
+
+      .btn-outline-danger {
+    display: center !important;
+    border: 2px!important;
+    border-radius: 50px !important;
+    margin: 5px !important;
+    padding: 8px 15px !important;
+    background-color: rgb(180, 57, 57) !important;
+    color: white !important;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 15px !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+  }
+
+    .btn-outline-danger:hover {
+    background-color: rgb(218, 121, 121) !important;
+    }
+
+    
