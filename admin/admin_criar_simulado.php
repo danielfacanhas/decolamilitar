@@ -2,6 +2,7 @@
 require_once '../config/verificar_admin.php';
 include("../config/db_connect.php");
 
+// ===============================
 // CRIAÇÃO / AJUSTE DAS TABELAS
 // ===============================
 
